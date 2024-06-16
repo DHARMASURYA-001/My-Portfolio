@@ -7,6 +7,8 @@
     <link rel="icon" href="./assets/Dharma logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <nav id="desktop-nav">
@@ -227,53 +229,78 @@
     <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+        <div class="projects-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/Project-4.jpg" alt="Project 1" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">AUTISM SPECTRUM DISORDER DIAGNOSIS</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="window.open('https://github.com/DHARMASURYA-001/brain-tumor-detection-using-svm-and-logistic-regression', '_blank');">Github</button>
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1KMky2kjwevLrwkDpcnjgfrA12_IW1miZ/view?usp=sharing', '_blank');">Demo
+                                    Video</button>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="experience-sub-title project-title">BRAIN TUMOR DETECTION USING SVM</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/DHARMASURYA-001/brain-tumor-detection-using-svm-and-logistic-regression', '_blank');">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://drive.google.com/file/d/1KMky2kjwevLrwkDpcnjgfrA12_IW1miZ/view?usp=sharing', '_blank');">
-                            Demo Video
-                        </button>
+                    <div class="swiper-slide">
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">BRAIN TUMOR DETECTION USING SVM</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="window.open('https://github.com/DHARMASURYA-001/brain-tumor-detection-using-svm-and-logistic-regression', '_blank');">Github</button>
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1KMky2kjwevLrwkDpcnjgfrA12_IW1miZ/view?usp=sharing', '_blank');">Demo
+                                    Video</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">BUS BOOKING MANAGEMENT SYSTEM</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="location.href='https://github.com/'">Github</button>
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1yN4clkg5JN9VLu6CUvDwMj8CCGayGdPU/view?usp=sharing', '_blank');">Demo
+                                    Video</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+                            </div>
+                            <h2 class="experience-sub-title project-title">Air Writing Recognition Using Open CV</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="location.href='https://github.com/'">Github</button>
+                                <button class="btn btn-color-2 project-btn"
+                                    onclick="window.open('https://drive.google.com/file/d/1sZECssu4lagUL56oJypi4zRikhqNQxLq/view?usp=sharing', '_blank');">Demo
+                                    Video</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-                    </div>
-                    <h2 class="experience-sub-title project-title">BUS BOOKING MANAGEMENT SYSTEM</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'"> 
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://drive.google.com/file/d/1yN4clkg5JN9VLu6CUvDwMj8CCGayGdPU/view?usp=sharing', '_blank');">
-                            Demo Video
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Air Writing Recognition Using Open CV</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://drive.google.com/file/d/1sZECssu4lagUL56oJypi4zRikhqNQxLq/view?usp=sharing', '_blank');">
-                            Demo Video
-                        </button>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
+        <div class="arrow-container">
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'" />
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'" />
+        </div>        
     </section>
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>

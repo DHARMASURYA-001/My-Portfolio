@@ -389,6 +389,27 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+.swiper-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+  z-index: 10;
+}
+
+.swiper-pagination-bullet-active {
+  background: black;
+}
+
 /* CONTACT */
 
 #contact {
