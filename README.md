@@ -1,25 +1,46 @@
-# My Portfolio
+# Dharma Surya's Portfolio 👨‍💻
 
-Welcome to my portfolio! I'm a passionate computer science enthusiast with a focus on problem-solving and innovation. Here's a glimpse of what you'll find on my site:
+Hey there! Welcome to my GitHub repository for my personal portfolio website.
 
-## 🔧 Skills
-- Tools: Jupyter Notebook, VB.NET, Hadoop
-- Programming Languages: C/C++, Python, R, PHP
-- Soft Skills: Interpersonal, Leadership
+## About Me ℹ️
+I'm Dharma Surya, a passionate Data Analyst and Frontend Developer. This portfolio is a reflection of my journey, showcasing my skills, projects, and experiences in the tech world.
 
-## 📜 Certifications
-- Enhancing Soft Skills and Personality - NPTEL—IIT Kanpur
-- Foundations: Data, Data, Everywhere - Coursera - Google
-- Programming Fundamentals - Coursera - Duke University
-- Build a Full Website Using WordPress - Coursera Project Network
-- Complete Python Developer In 2023: Zero to Mastery - Udemy
+## Features ✨
+- **Responsive Design**: Optimized for all devices, ensuring a seamless experience.
+- **Navigation**: Easy-to-use navigation with both desktop and mobile-friendly options.
+- **Project Showcase**: Highlights my recent projects with links to GitHub repos and demo videos.
+- **Contact Information**: Connect with me via email or LinkedIn for collaborations or just to say hi!
 
-## 🚀 Projects
-1. **Brain Tumor Detection**: Using SVM and Logistic Regression, I improved accuracy in brain tumor detection.
+## Technologies Used 🛠️
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Libraries**: Swiper.js for the projects carousel
+- **Other Tools**: VS Code, Git for version control
 
-2. **Brain Tumor Prediction**: Leveraging Machine Learning and SVM, I predict brain tumor presence in MRI images.
+## Getting Started 🚀
+To view my portfolio:
+1. Clone this repository: `git clone https://github.com/DHARMASURYA-001/My-Portfolio.git`
+2. Open `index.html` in your preferred web browser.
 
-3. **Bus Booking System**: Streamlined ticket reservation with PHP and MySQL.
+## Sneak Peek 📸
+![Portfolio Preview](https://dharmasurya.netlify.app/)
 
+## Projects 📂
+Here are some of the cool projects you'll find:
+- **Autism Spectrum Disorder Diagnosis**: Using machine learning techniques.
+- **Brain Tumor Detection Using SVM**: Leveraging support vector machines for medical imaging analysis.
+- **Bus Booking Management System**: Simplifying bus ticket reservations.
+- **Air Writing Recognition Using OpenCV**: Fun project exploring computer vision.
 
-Explore my portfolio to learn more about these projects and my journey in computer science!
+## Contributing 🤝
+I'm open to contributions! If you have any ideas or improvements, feel free to fork this repo, make your changes, and submit a pull request. Let's build something awesome together.
+
+## Contact Me 📲
+Feel free to reach out:
+- **Email**: [suryapavya001@gmail.com](mailto:suryapavya001@gmail.com)
+- **LinkedIn**: [Connect with me](https://linkedin.com/in/dharma-surya-r)
+
+## License 📝
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+Thanks for stopping by and checking out my work! 🌟
+
