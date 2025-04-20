@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dharma Surya Portfolio</title>
+    <!-- Favicon -->
     <link rel="icon" href="./assets/Dharma logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- CSS files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- EmailJS integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('w4fZMMRyJhf0p3xYr');
+        })();
+    </script>
 </head>
+
 <body>
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
         <div class="logo">Dharma Surya</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#desktop-nav">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Skills</a></li>
+                <li><a href="#education-experience">Edu & Exp</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Mobile Navigation (Hamburger) -->
     <nav id="hamburger-nav">
         <div class="logo">Dharma Surya</div>
         <div class="hamburger-menu">
@@ -32,126 +49,262 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#desktop-nav" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">skills</a></li>
+                <li><a href="#education-experience" onclick="toggleMenu()">Edu & Exp</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#desktop-nav" onclick="toggleMenu()">Home</a></li>
             </div>
         </div>
     </nav>
+
+    <!-- Profile/Hero Section -->
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="dharma surya profile pic">
+            <img src="./assets/profile-pic.png" alt="Dharma Surya profile pic">
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Dharma Surya</h1>
-            <p class="section__text__p2">Data Analyst | Frontend Developer</p>
+            <p class="section__text__p2" id="typing-text"></p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                <button class="btn btn-color-2" onclick="window.open('./assets/Dharma Surya Resume.pdf')">Download
+                    CV</button>
                 <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="window.open('https://linkedin.com/in/dharma-surya-r', '_blank');">
-                <img src="./assets/github.png" alt="My GitHub profile" class="icon" onclick="window.open('https://github.com/DHARMASURYA-001', '_blank');">
-                <img src="./assets/insta.png" alt="My Instagram profile" class="icon" onclick="window.open('https://www.instagram.com/dharmasurya._', '_blank');">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+                    onclick="window.open('https://linkedin.com/in/dharma-surya-r', '_blank');">
+                <img src="./assets/github.png" alt="My GitHub profile" class="icon"
+                    onclick="window.open('https://github.com/DHARMASURYA-001', '_blank');">
+                <img src="./assets/insta.png" alt="My Instagram profile" class="icon"
+                    onclick="window.open('https://www.instagram.com/dharmasurya._', '_blank');">
             </div>
         </div>
     </section>
+
+    <!-- About Section -->
     <section id="about">
         <h1 class="title">About Me</h1>
-        <p class="section__text__p1">Here, you will find more information about me, including details about what I do and my education, primarily focusing on programming and technology.</p>
+        <p class="section__text__p1">Here, you will find more information about me.</p>
+
         <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon" />
-                        <h3>Education</h3>
-                        <p>B.Sc. Computer Science - <a href="https://www.psgcas.ac.in/" target="_blank">PSG CAS</a> [2019-2022] <br>Master's of Computer Applications - <a href="https://vit.ac.in/" target="_blank">VIT Vellore</a> [2022-2024]</p>
+            <!-- Profile Image and Stats -->
+            <div class="about-pic-container">
+                <div class="section__pic-container">
+                    <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic">
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label">Years<br>Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects<br>Completed</span>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>
-                        I specialize in machine learning and data analysis, with a secondary skill in frontend development. My core strength is
-                        utilizing machine learning for data-driven decision-making. My passion lies in uncovering valuable insights through data
-                        analysis to drive project and organizational success.
-                        
-                    </p>
-                </div>
-                <div class="text-container">
-                    <p>
-                       <br><b>I'm actively seeking job opportunities that allow me to utilize my machine learning skills and further develop my
-                        expertise in this field, so if you have a suitable opportunity that aligns with my specialization, please don't hesitate
-                        to contact me.</b>
-                    </p>
+            </div>
+
+            <!-- About Description -->
+            <div class="about-details-container">
+                <div class="about-info">
+                    <h2>Who I Am</h2>
+                    <div class="text-container">
+                        <p class="about-text">
+                            Passionate Backend Developer with a solid foundation in building scalable and secure web
+                            applications.
+                            Currently an Backend Developer [SDE-1] at Turiyatree Technologies, skilled in Python, Flask, MySQL, and Frappe.
+                            Experienced in REST APIs, data modeling, and database optimization, driven by curiosity and
+                            a focus on delivering impactful tech solutions.
+                        </p>
+                        <div class="about-highlight">
+                            I'm always open to meaningful collaborations and opportunities to apply my backend
+                            development skills to impactful projects.
+                            If you're working on something that could benefit from expertise in Python, Flask, MySQL, or
+                            Frappe,
+                            feel free to reach out — I'd be glad to connect and contribute where I can.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'" />
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+            onclick="location.href='#education-experience'">
     </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore </p>
+
+    <!-- Education & Experience Section -->
+    <section id="education-experience">
+        <h1 class="title">Education & Experience</h1>
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="openTab('education')">Education</button>
+            <button class="tab-btn" onclick="openTab('experience')">Experience</button>
+        </div>
+
+        <div class="timeline-container">
+            <!-- Education Timeline -->
+            <div class="tab-content active" id="education">
+                <div class="timeline">
+                    <div class="timeline-inner">
+                        <!-- VIT Education -->
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <a href="https://vit.ac.in/" target="_blank">
+                                        <img src="./assets/Logo/vit-logo.png" alt="VIT logo" class="timeline-logo">
+                                    </a>
+                                    <div>
+                                        <h3>Sep 2022 - Jun 2024</h3>
+                                        <p><strong>Master of Computer Applications</strong><br>Vellore Institute of
+                                            Technology <br>Vellore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PSG Education -->
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <a href="https://www.psgcas.ac.in/" target="_blank">
+                                        <img src="./assets/Logo/psg-logo.png" alt="PSG logo" class="timeline-logo">
+                                    </a>
+                                    <div>
+                                        <h3>Jun 2019 - Jun 2022</h3>
+                                        <p><strong>B.Sc. Computer Science</strong><br>PSG College of Arts & Science
+                                            <br>Coimbatore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- High School Education -->
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <a href="https://holyangelstgmhss.org/" target="_blank">
+                                        <img src="./assets/Logo/holyangels-logo.png" alt="Holy Angels' logo"
+                                            class="timeline-logo">
+                                    </a>
+                                    <div>
+                                        <h3>Jun 2018 - Mar 2019</h3>
+                                        <p><strong>Higher Secondary Education</strong><br>Holy Angels' Matric. Hr. Sec.
+                                            School <br>Tiruchengode</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="tab-content" id="experience">
+                <div class="timeline">
+                    <div class="timeline-inner">
+                        <!-- Current Job -->
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <a href="https://turiyatree.com/" target="_blank">
+                                        <img src="./assets/Logo/Turiyatree-logo.jpg" alt="Turiyatree logo"
+                                            class="timeline-logo">
+                                    </a>
+                                    <div>
+                                        <h3>Oct 2023 - Present</h3>
+                                        <p><strong>Backend Developer</strong><br>Turiyatree Technologies <br>Chennai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Internship -->
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <a href="https://turiyatree.com/" target="_blank">
+                                        <img src="./assets/Logo/Turiyatree-logo.jpg" alt="Turiyatree logo"
+                                            class="timeline-logo">
+                                    </a>
+                                    <div>
+                                        <h3>Jul 2024 - Sep 2024</h3>
+                                        <p><strong>Intern - Backend Developer</strong><br>Turiyatree Technologies
+                                            <br>Chennai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#skills'">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <p class="section__text__p1">Explore</p>
         <h1 class="title">My Skills</h1>
-        <div class="experience-details-container">
+        <div class="skills-details-container">
             <div class="about-containers">
+                <!-- Programming Languages -->
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Programming Languages</h2>
+                    <h2 class="skills-sub-title">Programming Languages</h2>
                     <div class="article-container">
                         <article>
-                            <img src="./assets/Logo/Python-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/Python-logo.png" alt="Python icon" class="icon">
                             <div>
                                 <h3>Python</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/html-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/html-logo.png" alt="HTML icon" class="icon">
                             <div>
                                 <h3>HTML</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/css-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/css-logo.png" alt="CSS icon" class="icon">
                             <div>
                                 <h3>CSS</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/Javascript-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/Javascript-logo.png" alt="JavaScript icon" class="icon">
                             <div>
                                 <h3>JavaScript</h3>
                                 <p>Basic</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/dbms-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/dbms-logo.png" alt="DBMS icon" class="icon">
                             <div>
                                 <h3>DBMS</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/php-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/php-logo.png" alt="PHP icon" class="icon">
                             <div>
                                 <h3>PHP</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/react-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/react-logo.png" alt="React icon" class="icon">
                             <div>
                                 <h3>React JS</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/R-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/R-logo.png" alt="R icon" class="icon">
                             <div>
                                 <h3>R</h3>
                                 <p>Intermediate</p>
@@ -159,83 +312,78 @@
                         </article>
                     </div>
                 </div>
+
+                <!-- Tools -->
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Tools</h2>
+                    <h2 class="skills-sub-title">Tools</h2>
                     <div class="article-container">
                         <article>
-                            <img src="./assets/Logo/vsCode-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/vsCode-logo.png" alt="VS Code icon" class="icon">
                             <div>
                                 <h3>VS Code</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/hadoop-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/hadoop-logo.png" alt="Hadoop icon" class="icon">
                             <div>
                                 <h3>Hadoop</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/R-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/R-logo.png" alt="RStudio icon" class="icon">
                             <div>
                                 <h3>RStudio</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/Tableau-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/Tableau-logo.png" alt="Tableau icon" class="icon">
                             <div>
                                 <h3>Tableau</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/PowerBI-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/PowerBI-logo.png" alt="Power BI icon" class="icon">
                             <div>
                                 <h3>Power BI</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/Excel.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/Excel.png" alt="Excel icon" class="icon">
                             <div>
                                 <h3>Excel</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/Jupyter-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/Jupyter-logo.png" alt="Jupyter icon" class="icon">
                             <div>
                                 <h3>Jupyter Notebook</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img src="./assets/Logo/sql-logo.png" alt="Experience icon" class="icon" />
+                            <img src="./assets/Logo/sql-logo.png" alt="SQL icon" class="icon">
                             <div>
                                 <h3>SQL</h3>
-                                <p></p>
                             </div>
                         </article>
-                        
-                        
                     </div>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'" />
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'">
     </section>
+
+    <!-- Projects Section -->
     <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="projects-container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
+                    <!-- Project 1: Autism Spectrum Disorder Diagnosis -->
                     <div class="swiper-slide">
                         <div class="details-container color-container">
                             <div class="article-container">
-                                <img src="./assets/project-1.jpg" alt="Project 1" class="project-img" />
+                                <img src="./assets/project-1.jpg" alt="Project 1" class="project-img">
                             </div>
                             <h2 class="experience-sub-title project-title">AUTISM SPECTRUM DISORDER DIAGNOSIS</h2>
                             <div class="btn-container">
@@ -247,10 +395,12 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 2: Brain Tumor Detection -->
                     <div class="swiper-slide">
                         <div class="details-container color-container">
                             <div class="article-container">
-                                <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+                                <img src="./assets/project-2.png" alt="Project 2" class="project-img">
                             </div>
                             <h2 class="experience-sub-title project-title">BRAIN TUMOR DETECTION USING SVM</h2>
                             <div class="btn-container">
@@ -262,10 +412,12 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 3: Bus Booking System -->
                     <div class="swiper-slide">
                         <div class="details-container color-container">
                             <div class="article-container">
-                                <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+                                <img src="./assets/project-3.png" alt="Project 3" class="project-img">
                             </div>
                             <h2 class="experience-sub-title project-title">BUS BOOKING MANAGEMENT SYSTEM</h2>
                             <div class="btn-container">
@@ -277,10 +429,12 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 4: Air Writing Recognition -->
                     <div class="swiper-slide">
                         <div class="details-container color-container">
                             <div class="article-container">
-                                <img src="./assets/project-4.png" alt="Project 4" class="project-img" />
+                                <img src="./assets/project-4.png" alt="Project 4" class="project-img">
                             </div>
                             <h2 class="experience-sub-title project-title">Air Writing Recognition Using Open CV</h2>
                             <div class="btn-container">
@@ -293,36 +447,74 @@
                         </div>
                     </div>
                 </div>
+                <!-- Swiper Navigation Elements -->
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-        <div class="arrow-container">
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'" />
+            <div class="arrow-container">
+                <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'">
+            </div>
         </div>
-        </div>        
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:suryapavya001@gmail.com?subject=Portfolio%20Contact&body=Hey%20Dharma%20Surya,">suryapavya001@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://linkedin.com/in/dharma-surya-r" target="_blank">LinkedIn</a></p>
-            </div>
+        <h1 class="title">Let's Connect</h1>
+        <p class="connect-text">Connect with me easily by providing your name, email, and message.</p>
+        <div class="terminal-contact-container">
+            <form id="contact-form">
+                <!-- Name Field -->
+                <div class="terminal-form-group">
+                    <span class="terminal-prompt">❯</span>
+                    <label for="name">Name</label>
+                    <div class="input-line">
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="terminal-form-group">
+                    <span class="terminal-prompt">❯</span>
+                    <label for="email">Email ID</label>
+                    <div class="input-line">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <!-- Message Field -->
+                <div class="terminal-form-group">
+                    <span class="terminal-prompt">❯</span>
+                    <label for="message">Message</label>
+                    <div class="input-line">
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="terminal-btn">
+                    Send <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+
+                <!-- Form Status Message -->
+                <p id="form-status" class="form-status"></p>
+            </form>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="#desktop-nav">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Skills</a></li>
+                    <li><a href="#education-experience">Edu & Exp</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -330,6 +522,9 @@
         </nav>
         <p>Copyright &#169; 2023 Dharma Surya. All Rights Reserved.</p>
     </footer>
+
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>

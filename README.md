@@ -3,23 +3,34 @@
 Hey there! Welcome to my GitHub repository for my personal portfolio website.
 
 ## About Me ℹ️
-I'm Dharma Surya, a passionate Data Analyst and Frontend Developer. This portfolio is a reflection of my journey, showcasing my skills, projects, and experiences in the tech world.
+I'm Dharma Surya — a Backend Developer passionate about building scalable, secure, and high-performance web applications. Currently working as an SDE-1 at Turiyatree Technologies, my work revolves around solving real-world problems with elegant backend architectures and automation.
 
-## Features ✨
-- **Responsive Design**: Optimized for all devices, ensuring a seamless experience.
-- **Navigation**: Easy-to-use navigation with both desktop and mobile-friendly options.
-- **Project Showcase**: Highlights my recent projects with links to GitHub repos and demo videos.
-- **Contact Information**: Connect with me via email or LinkedIn for collaborations or just to say hi!
+## 🔥 Key Highlights
+- AI-powered report and assessment platforms
+- Seamless payment gateway integrations (Razorpay, PhonePe, Stripe)
+- Resume parsing & analysis using FastAPI and ML
+- Secure exam environments with Safe Exam Browser
+- Backend optimization and data migration at scale
 
-## Technologies Used 🛠️
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Libraries**: Swiper.js for the projects carousel
-- **Other Tools**: VS Code, Git for version control
+## 🚀 Projects Spotlight
+- **AI-Based Report Builder**  
+  Natural language to structured reports with Slack integration and custom templates.
 
-## Getting Started 🚀
-To view my portfolio:
-1. Clone this repository: `git clone https://github.com/DHARMASURYA-001/My-Portfolio.git`
-2. Open `index.html` in your preferred web browser.
+- **Assessment Creation Platform**  
+  AI-driven assessments, Razorpay payment flows, Google Docs integration, and secure browser wrapper.
+
+- **Centralized Payment Gateway**  
+  Unified domestic/international transactions with real-time reporting and post-payment automation.
+
+- **ElevateResume-AI**  
+  Resume parsing and matching tool with FastAPI and malware scanning using ClamAV.
+
+## 🛠️ Tech Stack
+- **Languages**: Python, PHP, R  
+- **Frameworks**: Flask, Frappe, FastAPI  
+- **Tools**: Git, Hadoop, VB.NET  
+- **Database**: MySQL  
+- **Others**: API automation testing, payment gateway integration
 
 ## Sneak Peek 📸
 ![Portfolio Preview](https://dharmasurya.netlify.app/)

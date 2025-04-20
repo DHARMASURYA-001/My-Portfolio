@@ -1,20 +1,64 @@
+/**
+ * Portfolio Website Media Queries
+ * Contains responsive styling for different screen sizes.
+ */
+
+/* =================
+   Large Screens (max-width: 1400px)
+   ================= */
 @media screen and (max-width: 1400px) {
+
+    /* Profile section adjustments */
     #profile {
         height: 83vh;
         margin-bottom: 6rem;
     }
 
+    /* About section container */
     .about-containers {
         flex-wrap: wrap;
     }
 
+    .section-container {
+        gap: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about-pic-container {
+        flex: 0 0 45%;
+    }
+
+    .about-details-container {
+        flex: 0 0 50%;
+    }
+
+    /* Section heights */
     #contact,
     #projects {
         height: fit-content;
     }
+
+    /* Timeline container */
+    .timeline {
+        height: auto;
+        max-height: 450px;
+    }
+
+    /* Contact container */
+    .terminal-contact-container {
+        max-width: 600px;
+        width: 90%;
+    }
 }
 
+/* =================
+   Medium Screens (max-width: 1200px)
+   ================= */
 @media screen and (max-width: 1200px) {
+
+    /* Navigation changes */
     #desktop-nav {
         display: none;
     }
@@ -23,20 +67,52 @@
         display: flex;
     }
 
-    #experience,
-    .experience-details-container {
+    /* Skills section */
+    #skills,
+    .skills-details-container {
         margin-top: 2rem;
     }
 
+    /* Profile and section layouts */
     #profile,
     .section-container {
         display: block;
     }
 
+    /* About section */
+    #about {
+        height: auto;
+        padding: 3rem 0 4rem;
+    }
+
+    .section-container {
+        height: auto;
+    }
+
+    .about-pic-container,
+    .about-details-container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .about-pic-container {
+        max-width: 400px;
+        margin: 0 auto 2rem;
+    }
+
+    .about-stats {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    /* Hide directional arrows */
     .arrow {
         display: none;
     }
 
+    /* Section heights */
     section,
     .section-container {
         height: fit-content;
@@ -46,29 +122,260 @@
         margin: 0 5%;
     }
 
+    /* Profile picture container */
     .section__pic-container {
         width: 275px;
         height: 275px;
         margin: 0 auto 2rem;
     }
 
+    /* About containers spacing */
     .about-containers {
         margin-top: 0;
     }
-}
 
-@media screen and (max-width: 600px) {
-
-    #contact,
-    footer {
-        height: 40vh;
+    /* Education/Experience section */
+    #education-experience {
+        margin: 0 5%;
+        padding-bottom: 4rem;
     }
 
+    .timeline {
+        height: auto;
+        max-height: 420px;
+    }
+
+    .timeline .timeline-inner {
+        animation: scrollTimeline 25s linear infinite;
+    }
+}
+
+/* =================
+   Tablet Screens (max-width: 768px)
+   ================= */
+@media screen and (max-width: 768px) {
+
+    /* About section refinements */
+    .about-pic-container {
+        max-width: 320px;
+    }
+
+    .about-highlight {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-left: 4px solid rgb(53, 53, 53);
+    }
+
+    .about-info h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+        position: relative;
+    }
+
+    .about-info h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: #555;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Timeline adjustments */
+    .timeline::after {
+        left: 25px;
+        /* Line position adjustment */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        /* Increase space for content */
+        padding-right: 20px;
+        float: none;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        /* Reset position */
+        padding-left: 70px;
+        padding-right: 20px;
+        float: none;
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        text-align: left;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 12px;
+        /* Align dot with new line position */
+    }
+
+    /* Header adjustments */
+    .timeline-item.left .timeline-header {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .timeline-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Timeline container */
+    .timeline {
+        height: auto;
+        max-height: 400px;
+        padding: 1rem 0;
+    }
+
+    .timeline .timeline-inner {
+        gap: 2rem;
+    }
+
+    /* Timeline animation */
+    @keyframes scrollTimeline {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-80%);
+        }
+    }
+
+    /* Contact form adjustments */
+    .terminal-contact-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .terminal-form-group {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .terminal-form-group label {
+        min-width: 70px;
+        font-size: 1rem;
+    }
+
+    .input-line {
+        width: 100%;
+    }
+
+    .terminal-form-group input,
+    .terminal-form-group textarea {
+        margin-right: 2rem;
+    }
+
+    .terminal-prompt {
+        font-size: 1.2rem;
+    }
+
+    /* Section text */
+    .section__text__p1 {
+        max-width: 90%;
+        margin: 0 auto 2rem;
+        text-align: center;
+    }
+}
+
+/* =================
+   Mobile Screens (max-width: 600px)
+   ================= */
+@media screen and (max-width: 600px) {
+
+    /* Profile section */
     #profile {
         height: 83vh;
         margin-bottom: 0;
     }
 
+    /* About section */
+    #about {
+        padding: 2rem 0 3rem;
+        margin: 0;
+        /* Remove side margin for full width */
+    }
+
+    .about-pic-container {
+        max-width: 260px;
+        margin: 0 auto 1.5rem;
+    }
+
+    /* Text styles */
+    .section__text__p1 {
+        font-size: 0.95rem;
+        max-width: 95%;
+        margin: 0 auto 1rem;
+        text-align: center;
+    }
+
+    .about-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 25rem;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .about-highlight {
+        padding: 0.8rem;
+        border-left: 3px solid rgb(53, 53, 53);
+        font-size: 0.9rem;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* Stats */
+    .stat-number {
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .about-stats {
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    /* Container */
+    .about-details-container {
+        width: 95%;
+        margin-bottom: 1rem;
+        padding: 0 0.5rem;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /* Article and footer */
     article {
         font-size: 1rem;
     }
@@ -78,6 +385,7 @@
         margin-bottom: 2rem;
     }
 
+    /* Containers */
     .about-containers,
     .contact-info-upper-container,
     .btn-container {
@@ -88,12 +396,13 @@
         margin: 0;
     }
 
+    /* Font sizes */
     .contact-info-container p,
     .nav-links li a {
         font-size: 1rem;
     }
 
-    .experience-sub-title {
+    .skills-sub-title {
         font-size: 1.25rem;
     }
 
@@ -101,27 +410,216 @@
         font-size: 1.5rem;
     }
 
+    /* Navigation */
     .nav-links {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
     }
 
+    /* Profile picture */
     .section__pic-container {
         width: auto;
         height: 46vw;
         justify-content: center;
     }
 
+    /* Text sizing */
     .section__text__p2 {
         font-size: 1.25rem;
     }
 
-    .title {
-        font-size: 2rem;
+    .text-container {
+        text-align: center;
     }
 
-    .text-container {
+    /* Mobile timeline */
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        padding-left: 50px;
+        padding-right: 10px;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline::after {
+        left: 24px;
+    }
+
+    .timeline-item::before {
+        left: 11px;
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Tab buttons */
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Timeline container */
+    .timeline {
+        padding: 1rem 0;
+        height: auto;
+        max-height: 360px;
+    }
+
+    .timeline .timeline-inner {
+        gap: 1.5rem;
+    }
+
+    /* Timeline logo */
+    .timeline-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .timeline-header {
+        gap: 10px;
+    }
+
+    /* Content text */
+    .timeline-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Education section height */
+    #education-experience {
+        min-height: 80vh;
+    }
+
+    /* Terminal contact */
+    .terminal-contact-container {
+        padding: 0 0 2rem 1rem;
+    }
+
+    /* Animation adjustment */
+    @keyframes scrollTimeline {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+}
+
+/* =================
+   Very Small Screens (max-width: 375px)
+   ================= */
+@media screen and (max-width: 375px) {
+
+    /* About section */
+    #about {
+        padding: 1.5rem 0 2.5rem;
+    }
+
+    .about-pic-container {
+        max-width: 220px;
+        margin: 0 auto 1rem;
+    }
+
+    .about-details-container {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0 0.5rem;
+        align-items: center;
+    }
+
+    /* Text styles */
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 19rem;
+        margin-bottom: 1rem;
         text-align: justify;
+    }
+
+    .about-highlight {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        max-width: 17rem;
+        margin-bottom: 0.75rem;
+        text-align: justify;
+    }
+
+    /* Stats */
+    .about-stats {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Text sizing */
+    .title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .section__text__p1 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .about-info h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    /* Timeline */
+    .timeline {
+        max-height: 320px;
+    }
+
+    .tab-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .timeline-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 0.85rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+
+    /* Timeline items */
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        padding-left: 40px;
+    }
+
+    .timeline::after {
+        left: 24px;
+    }
+
+    .timeline-item::before {
+        left: 8px;
     }
 }
