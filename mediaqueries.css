@@ -192,7 +192,7 @@
     }
 
     /* Projects */
-    #projects { overflow: hidden; }
+    #projects { overflow: visible; }
 
     .projects-container {
         padding: 0 2.5rem;

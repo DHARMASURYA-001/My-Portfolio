@@ -545,6 +545,10 @@ html {
   transition: transform 0.3s ease;
 }
 
+#projects > .arrow {
+  bottom: 5rem;
+}
+
 .arrow:hover {
   transform: translateY(5px);
   animation: bounce 1s infinite;
